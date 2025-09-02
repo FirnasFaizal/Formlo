@@ -44,7 +44,9 @@ oauth.register(
     name='google',
     client_id=os.environ.get('GOOGLE_CLIENT_ID'),
     client_secret=os.environ.get('GOOGLE_CLIENT_SECRET'),
-    server_metadata_url='https://accounts.google.com/.well-known/openid_configuration',
+    authorize_url='https://accounts.google.com/o/oauth2/v2/auth',
+    access_token_url='https://oauth2.googleapis.com/token',
+    api_base_url='https://openidconnect.googleapis.com/v1/',
     client_kwargs={
         'scope': 'openid email profile https://www.googleapis.com/auth/forms.body https://www.googleapis.com/auth/drive.file'
     }
