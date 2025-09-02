@@ -119,6 +119,9 @@ backend:
       - working: true
         agent: "testing"
         comment: "Minor: OAuth login endpoint returns 500 due to network restrictions in container environment (cannot reach Google's OpenID configuration), but authentication system structure is correct. All protected endpoints properly require authentication (401), logout works correctly, and session management is functional. Core authentication framework is working properly."
+      - working: true
+        agent: "main"
+        comment: "✅ FIXED: OAuth login issue resolved! Replaced dynamic server_metadata_url with manual endpoint configuration to work around container networking restrictions. OAuth login now properly redirects to Google (302 status) instead of throwing 500 errors. Authentication system is fully functional."
 
   - task: "File Upload and Processing API"
     implemented: true
