@@ -122,6 +122,9 @@ backend:
       - working: true
         agent: "main"
         comment: "✅ FIXED: OAuth login issue resolved! Replaced dynamic server_metadata_url with manual endpoint configuration to work around container networking restrictions. OAuth login now properly redirects to Google (302 status) instead of throwing 500 errors. Authentication system is fully functional."
+      - working: true
+        agent: "main"
+        comment: "✅ FIXED: OAuth callback internal server error resolved! Added missing jwks_uri ('https://www.googleapis.com/oauth2/v3/certs') to OAuth configuration. Now properly handles Google OAuth token validation. OAuth flow is working end-to-end."
 
   - task: "File Upload and Processing API"
     implemented: true
