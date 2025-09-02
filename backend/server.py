@@ -300,7 +300,7 @@ async def root():
 
 @api_router.get("/auth/login")
 async def login(request: Request):
-    redirect_uri = 'https://formlo.preview.emergentagent.com/api/auth/callback'
+    redirect_uri = 'https://test-runner-9.preview.emergentagent.com/api/auth/callback'
     return await oauth.google.authorize_redirect(request, redirect_uri)
 
 @api_router.get("/auth/callback")
