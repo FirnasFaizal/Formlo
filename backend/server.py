@@ -47,6 +47,7 @@ oauth.register(
     authorize_url='https://accounts.google.com/o/oauth2/v2/auth',
     access_token_url='https://oauth2.googleapis.com/token',
     api_base_url='https://openidconnect.googleapis.com/v1/',
+    jwks_uri='https://www.googleapis.com/oauth2/v3/certs',
     client_kwargs={
         'scope': 'openid email profile https://www.googleapis.com/auth/forms.body https://www.googleapis.com/auth/drive.file'
     }
